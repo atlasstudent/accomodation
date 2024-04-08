@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Atlass Project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
         }
 
         .section1 {
-            background-image: url('./images/acc1.jpg');
+            background-image: url('./images/wall.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             /* opacity: 0.5; */
@@ -64,27 +64,28 @@
             padding-bottom: 50px;
         }
     </style>
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+   <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-          </li>
+          </li> -->
           <!-- <li class="nav-item">
             <a class="nav-link" href="./feedback.html">Reviews</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./aboutus.html">About Us</a>
           </li> -->
-        </ul>
+        <!-- </ul>
       </div>
 
-  </nav>
+  </nav> -->
     <div class="container-fluid section section1">
         <!-- Content here -->
 <div class="content">
     <div class="headersection">
-        <h1>STUDENT ACCOMODATIONS</h1>
+        <!-- <h1>STUDENT ACCOMODATIONS</h1> -->
+        <img src="./images/image.png" alt="" srcset="">
     </div>
     <div>
         <div class="formstyle form-col1">
@@ -112,12 +113,28 @@
               </div>
               
           </div>
-          <button class="btn btn-primary mt-3" style="padding: 15px; border-radius:25px ;font-size: large; width: 25%;" onclick="search()">Search</button>
+          <button class="btn btn-primary mt-3" style="padding: 15px; border-radius:15px ;font-size: large; width: 25%;" onclick="search()">Search</button>
         </div>
         
     </div>
 </div>
     </div>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" previewlistener="true">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Studend House - Project Dormify</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         function search(e) {
