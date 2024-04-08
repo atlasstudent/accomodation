@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+        body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+        .custom-form-label {
+            font-size: small;
+            color: gray;
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            color: black;
+        }
+
+        .section1 {
+            background-image: url('./image/acc1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* opacity: 0.5; */
+        }
+        .content{
+            background: white;
+            padding: 75px 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .formstyle {
+            display: flex;
+        }
+
+        .col-dev {
+            margin: 15px
+        }
+        .form-row1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .form-col1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .headersection{
+            text-align: center;
+            padding-bottom: 50px;
+        }
+    </style>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="./feedback.html">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aboutus.html">About Us</a>
+          </li> -->
+        </ul>
+      </div>
+
+  </nav>
+    <div class="container-fluid section section1">
+        <!-- Content here -->
+<div class="content">
+    <div class="headersection">
+        <h1>STUDENT ACCOMODATIONS</h1>
+    </div>
+    <div>
+        <div class="formstyle form-col1">
+          
+          <div class="form-row1">
+            <div class="col-dev" style="flex-grow: 4;">
+                <label for="location" class="form-label custom-form-label">Location</label>
+                <input type="text" class="form-control" id="location" placeholder="Andheri, BKC, Bandra..." style="width: 500px; height: 50px;">
+              </div>
+            <div class="col-dev" style="flex-grow: 1;">
+                <label for="accType" class="form-label custom-form-label">Hostel Type</label>
+                <select class="form-select" id="accType" style="height: 50px;">
+                  <option value="mixed" selected>Mixed</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="col-dev" style="flex-grow: 1; display: flex; flex-direction: column;">
+                <label for="priceRange" class="form-label custom-form-label">Price Range (per month)</label>
+                <div style="    display: flex;
+                align-items: center;">
+                   <input step="1000" onchange="slider(this.value)" type="range" class="form-control-range" id="priceRange" style="height: 50px;" min="1000" max="70000" value="10000"> 
+                   &nbsp;&nbsp;<span id="sliderid">10000</span> 
+                </div>
+              </div>
+              
+          </div>
+          <button class="btn btn-primary mt-3" style="padding: 15px; border-radius:25px ;font-size: large; width: 25%;" onclick="search()">Search</button>
+        </div>
+        
+    </div>
+</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        function search(e) {
+            const loc = document.getElementById("location").value;
+            const accType = document.getElementById("accType").value;
+            const priceRange = document.getElementById("priceRange").value;
+            window.open(`./search.html?location=${loc}&pricerange=${priceRange}&accType=${accType}`, "_self");
+        }
+
+        function slider(val){
+            document.getElementById("sliderid").innerText = val;
+        }
+    </script>
+  </body>
+</html>
